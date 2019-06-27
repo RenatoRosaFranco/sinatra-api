@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import AddNinja from './components/AddNinja';
 import Ninja from './components/Ninja';
 
 class App extends React.Component {
@@ -38,6 +39,10 @@ class App extends React.Component {
     console.log('form submited by', this.state.name);
   }
 
+  addNinja = (newNinja) => {
+    console.log(newNinja);
+  }
+
   render(){
     return (
       <div className="App">
@@ -46,6 +51,8 @@ class App extends React.Component {
         <button onClick={this.handleClick}>Click me</button>  
         <button onMouseOver={this.handleMouseOver}>Hover me</button>
         <p onCopy={this.handleCopy}>What we think, we become</p>
+
+        <AddNinja addNinja={this.addNinja}/>
 
         <form onSubmit={this.handleSubmit}>
           <div className={'field'}>
