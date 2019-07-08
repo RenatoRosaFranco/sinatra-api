@@ -10,3 +10,10 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+
+// Hot Reload
+// in every change the page will be reloaded automatically
+if(module.hot) {
+    module.hot.accept();
+}
